@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이름"
+            android:layout_margin="20dp"/>
+
+        <EditText
+            android:id="@+id/new_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이메일"
+            android:layout_margin="20dp"/>
+
+        <EditText
+            android:id="@+id/new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호"
+            android:layout_margin="20dp"/>
+
+        <EditText
+            android:id="@+id/stdent_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="학번"
+            android:layout_margin="20dp"/>
+        <Button
+            android:id="@+id/sign_clear_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="가입완료"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

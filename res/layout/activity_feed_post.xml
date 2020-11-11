@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/feed_form"
+    android:orientation="vertical"
+    tools:context=".FeedSub">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_rowSpan="3"/>
+
+            <TextView android:text="Test"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <TextView android:text="날짜"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginLeft="20dp"/>
+        </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test용입니다."
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginLeft="300dp"/>
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icons_comment_1"
+            android:background="#ffffff"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginLeft="10dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons_like"
+            android:layout_marginLeft="4dp"
+            android:background="#ffffff"/>
+
+    </LinearLayout>
+</LinearLayout>

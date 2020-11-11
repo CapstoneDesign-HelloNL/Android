@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/group_btn"
+        android:enabled="true"
+        android:icon="@android:drawable/radiobutton_on_background"
+        android:title=""/>
+
+    <item
+        android:id="@+id/sns_btn"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title=""/>
+
+    <item
+        android:id="@+id/alert_btn"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title=""/>
+
+    <item
+        android:id="@+id/setup_btn"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:title=""/>
+</menu>
