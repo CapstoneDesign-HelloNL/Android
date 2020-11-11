@@ -3,31 +3,38 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/sign_in_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="example@areact.com"
-            android:layout_margin="20dp"/>
+            android:layout_margin="20dp"
+            android:maxLines="1"
+            android:inputType="text"/>
 
         <EditText
+            android:id="@+id/sign_in_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="비밀번호"
-            android:layout_margin="20dp"/>
+            android:layout_margin="20dp"
+            android:maxLines="1"
+            android:inputType="text"/>
 
         <Button
             android:id="@+id/continue_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
             android:text="계속"
-            android:layout_gravity="center"/>
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
+            android:layout_width="370dp"
+            android:layout_height="52dp"
+            android:background="@drawable/buttonshape"/>
     </LinearLayout>
 </LinearLayout>

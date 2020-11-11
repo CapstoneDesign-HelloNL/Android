@@ -2,20 +2,33 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.areact">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".GroupRequestJoin"></activity>
-        <activity android:name=".GroupSelectActivity" />
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <activity android:name=".FeedPostMsg" />
+        <activity android:name=".FeedPostWrite" />
+        <activity android:name=".FeedSub_detail" />
+        <activity android:name=".GroupGallery_detail" />
+        <activity android:name=".GroupNotice_write" />
+        <activity android:name=".GroupNotice_detail" />
+        <activity android:name=".GroupSchedule_detail" />
+        <activity android:name=".GroupDetailActivity" />
+        <activity android:name=".GroupAddActivity" />
+        <activity android:name=".GroupRequestJoin" />
         <activity android:name=".SetupFragment" />
         <activity android:name=".AlertFragment" />
         <activity android:name=".SocialFragment" />
         <activity android:name=".GroupFragment" />
         <activity android:name=".GroupMainActivity" />
-        <activity android:name=".SearchMain_group" />
+        <activity android:name=".GroupSearch" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,5 +38,4 @@
         </activity>
         <activity android:name=".LoginActivity" />
     </application>
-
 </manifest>

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Preference xmlns:android="http://schemas.android.com/apk/res/android">
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">jsonplaceholder.typicode.com</domain>
+    </domain-config>
 
-</Preference>
+</network-security-config>

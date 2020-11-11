@@ -1,9 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GroupRequestJoin">
+    tools:context=".GroupAddActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <ImageButton
+            android:id="@+id/group_request_join_back_btn"
+            android:background="#ffffff"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/return_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가입 요청"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="125dp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="관심 분야"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"/>
+        <EditText
+            android:id="@+id/group_request_interest_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="14sp"
+            android:backgroundTint="#00D9C5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="지원 동기"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/group_request_reason_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="14sp"
+            android:backgroundTint="#00D9C5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="380dp"
+            android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가입할 준비가 되셨나요?"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="당신은 관리자의 승인 후에 가입이 될 것입니다."
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동아리원들과 활발한 교류를 해보세요!"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:layout_marginBottom="55dp"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/group_request_complete_btn"
+            android:text="가입 완료"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_margin="20dp"
+            android:layout_width="370dp"
+            android:layout_height="52dp"
+            android:background="@drawable/buttonshape"/>
+    </LinearLayout>
+</FrameLayout>

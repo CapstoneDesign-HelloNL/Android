@@ -10,38 +10,50 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/sign_up_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="이름"
-            android:layout_margin="20dp"/>
+            android:layout_margin="20dp"
+            android:maxLines="1"
+            android:inputType="text"/>
 
         <EditText
-            android:id="@+id/new_email"
+            android:id="@+id/sign_up_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="이메일"
-            android:layout_margin="20dp"/>
+            android:layout_margin="20dp"
+            android:maxLines="1"
+            android:inputType="text"/>
 
         <EditText
-            android:id="@+id/new_password"
+            android:id="@+id/sign_up_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="비밀번호"
-            android:layout_margin="20dp"/>
+            android:layout_margin="20dp"
+            android:maxLines="1"
+            android:inputType="text"/>
 
         <EditText
-            android:id="@+id/stdent_id"
+            android:id="@+id/sign_up_stuId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="학번"
-            android:layout_margin="20dp"/>
+            android:layout_margin="20dp"
+            android:maxLines="1"
+            android:inputType="text"/>
+
         <Button
-            android:id="@+id/sign_clear_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:text="가입완료"
-            android:layout_gravity="center"/>
+            android:id="@+id/continue_btn"
+            android:text="가입 완료"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
+            android:layout_width="370dp"
+            android:layout_height="52dp"
+            android:background="@drawable/buttonshape"/>
     </LinearLayout>
 </LinearLayout>

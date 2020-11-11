@@ -1,10 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FeedHambar">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feed_drawer"
+    android:layout_width="280dp"
+    android:layout_height="620dp"
+    android:orientation="vertical"
+    android:layout_gravity="right">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#4B9AC8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="피드 메뉴"
+            android:textSize="24sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="130dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#8C8C8C"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FAFAFA">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+        </ScrollView>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/feed_write_icon"
+                android:background="#FAFAFA"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/feed_ham_write"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="35dp"
+                android:text="피드 작성"
+                android:textSize="18sp"/>
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/message_icon"
+                android:background="#FAFAFA"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/feed_ham_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="메시지"
+                android:textSize="18sp"/>
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,9 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feed_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FeedSub_detail">
+    tools:context=".FeedSub_detail"
+    android:orientation="vertical"
+    android:background="#4B9AC8">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:background="@drawable/feed_round_bg2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            android:layout_marginLeft="50dp"
+            android:text="test"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/feed_round_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/feed_sub_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:background="#4B9AC8"
+                android:src="@drawable/return_white_icon" />
+            <ImageButton
+                android:id="@+id/feed_hamburger"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="5dp"
+                android:background="#4B9AC8"
+                android:src="@drawable/hamburger_bar" />
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_rowSpan="3"/>
+
+            <TextView android:text="Test"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView android:text="날짜"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginLeft="20dp"/>
+        </GridLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="430dp">
+
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icons_comment_white"
+            android:background="#4B9AC8"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/align_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개의 댓글"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="170dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/heart_white"
+            android:background="#4B9AC8"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="440dp"
+        android:orientation="vertical">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_rowSpan="3"/>
+
+            <TextView android:text="Test"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView android:text="날짜"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginLeft="20dp"/>
+        </GridLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"
+            android:text="이것은 test용 댓글입니다."/>
+    </LinearLayout>
+    </FrameLayout>
+    <include
+        layout="@layout/activity_feed_hambar"/>
+</androidx.drawerlayout.widget.DrawerLayout>

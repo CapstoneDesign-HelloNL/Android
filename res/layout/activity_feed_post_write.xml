@@ -1,10 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/feed_post_write_layout"
     tools:context=".FeedPostWrite">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:layout_marginLeft="50dp"
+                android:hint="무슨 생각을 하고 계신가요?"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/feed_round_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/feed_write_back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#4B9AC8"
+                    android:src="@drawable/return_white_icon" />
+                <Button
+                    android:id="@+id/feed_write_complete"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="5dp"
+                    android:text="작성완료"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:background="#4B9AC8"/>
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+                <ImageView
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_rowSpan="3"/>
+
+                <TextView android:text="Test"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView android:text="날짜"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_marginLeft="20dp"/>
+            </GridLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

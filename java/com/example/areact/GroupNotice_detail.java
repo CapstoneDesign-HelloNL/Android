@@ -1,6 +1,7 @@
 package com.example.areact;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
 public class GroupNotice_detail extends AppCompatActivity {

@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_search_item"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".FeedPost">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="22dp"
+        android:paddingBottom="12dp">
+        <ImageView
+            android:id="@+id/group_search_item_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/test_image"
+            android:layout_rowSpan="3"
+            android:background="@drawable/shape_feed"/>
+
+        <TextView
+            android:id="@+id/group_search_item_g_n"
+            android:text="NL"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:textColor="#222222"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/group_search_item_s_n"
+            android:text="서울과학기술대학교 컴퓨터공학과"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#222222"/>
+    </GridLayout>
+</LinearLayout>

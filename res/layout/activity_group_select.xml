@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/group_select_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GroupSelectActivity"
+    android:layout_height="fill_parent"
     android:orientation="vertical">
 
+    <com.github.mmin18.widget.RealtimeBlurView
+        android:id="@+id/realtime_blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:realtimeBlurRadius="10dp"
+        app:realtimeOverlayColor="#A70E8D81"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="240dp"
+        android:orientation="vertical">
     <TextView
+        android:id="@+id/group_select_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="30dp"
-        android:text="NL"
-        android:layout_marginTop="250dp"/>
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:text="NL"/>
+
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -22,6 +37,7 @@
         android:layout_marginTop="10dp">
 
         <ImageView
+            android:id="@+id/group_select_img"
             android:src="@mipmap/ic_launcher"
             android:layout_row="0"
             android:layout_rowSpan="3"/>
@@ -29,27 +45,35 @@
         <TextView
             android:text="개설일 : "
             android:layout_column="1"
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginLeft="15dp"
+            android:textColor="#99FFFFFF"
+            android:textSize="10sp"/>
 
         <TextView
             android:text="yyyy-mm-dd"
-            android:layout_columnSpan="2"/>
+            android:layout_columnSpan="2"
+            android:textColor="#99FFFFFF"
+            android:textSize="10sp"/>
 
         <TextView
             android:text="null"
             android:layout_row="1"
             android:layout_column="1"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="3dp"/>
+            android:layout_marginTop="3dp"
+            android:textColor="#ffffff"/>
 
         <TextView
+            android:id="@+id/gorup_select_society"
             android:text="null"
             android:layout_row="2"
             android:layout_column="1"
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginLeft="15dp"
+            android:textColor="#ffffff"/>
     </GridLayout>
 
     <Button
+        android:id="@+id/group_select_cancel_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="취소"
@@ -57,9 +81,11 @@
         android:padding="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/buttonshape_gray"
         android:textColor="#ffffff"/>
 
     <Button
+        android:id="@+id/group_select_request_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="가입요청"
@@ -67,5 +93,11 @@
         android:padding="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/buttonshape"
         android:textColor="#ffffff"/>
-</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </LinearLayout>
+</FrameLayout>

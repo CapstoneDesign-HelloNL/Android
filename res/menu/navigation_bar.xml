@@ -4,24 +4,24 @@
     <item
         android:id="@+id/group_btn"
         android:enabled="true"
-        android:icon="@android:drawable/radiobutton_on_background"
+        android:icon="@drawable/group_btn"
         android:title=""/>
 
     <item
         android:id="@+id/sns_btn"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
+        android:icon="@drawable/sns_btn"
         android:title=""/>
 
     <item
         android:id="@+id/alert_btn"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_alert"
+        android:icon="@drawable/alert_btn"
         android:title=""/>
 
     <item
         android:id="@+id/setup_btn"
         android:enabled="true"
-        android:icon="@android:drawable/ic_menu_upload"
+        android:icon="@drawable/setting_btn"
         android:title=""/>
 </menu>
