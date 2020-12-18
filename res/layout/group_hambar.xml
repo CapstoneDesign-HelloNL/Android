@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_drawer"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="right">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#616161"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/group_ham_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="NL"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="130dp" />
+
+        <ImageButton
+            android:id="@+id/group_ham_delete_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="137dp"
+            android:layout_marginLeft="245dp"
+            android:background="#616161"
+            android:src="@drawable/ic_delete_pink_24dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FAFAFA">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+
+        </ScrollView>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/group_ham_heart"
+                android:background="#FAFAFA"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="33dp" />
+
+            <TextView
+                android:id="@+id/group_ham_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="35dp"
+                android:text="동아리 정보"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/group_ham_info"
+                android:background="#FAFAFA"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="25dp" />
+
+            <TextView
+                android:id="@+id/group_ham_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:text="명단"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/group_ham_agenda"
+                android:background="#FAFAFA"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="25dp" />
+
+            <TextView
+                android:id="@+id/group_ham_agenda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:text="마음의 소리함"
+                android:textSize="18sp" />
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>

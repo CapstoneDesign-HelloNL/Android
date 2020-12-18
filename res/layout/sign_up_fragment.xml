@@ -34,6 +34,15 @@
             android:hint="비밀번호"
             android:layout_margin="20dp"
             android:maxLines="1"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/sign_up_univ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="학교"
+            android:layout_margin="20dp"
+            android:maxLines="1"
             android:inputType="text"/>
 
         <EditText
@@ -46,7 +55,7 @@
             android:inputType="text"/>
 
         <Button
-            android:id="@+id/continue_btn"
+            android:id="@+id/sign_up_complete_btn"
             android:text="가입 완료"
             android:textColor="#FFFFFF"
             android:textSize="16sp"

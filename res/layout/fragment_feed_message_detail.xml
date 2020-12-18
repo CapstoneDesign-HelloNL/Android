@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00D9C5"
+    tools:context=".feed.FeedMessageDetailFragment">
+
+    <RelativeLayout
+        android:id="@+id/textcall"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#00C4B2">
+
+        <EditText
+            android:id="@+id/feed_message_detail_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/shape_feed" />
+
+        <ImageButton
+            android:id="@+id/feed_message_detail_send_btn"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:padding="10dp"
+            android:layout_marginRight="35dp"
+            android:background="#ffffff"
+            android:src="@drawable/message_return_icon" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/feed_message_detail_scroll"
+        android:layout_width="wrap_content"
+        android:layout_above="@id/textcall"
+        android:layout_height="415dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_detail_layout">
+
+            <TextView
+                android:id="@+id/chat_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="양정훈"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/chat_tv1"
+                android:background="@drawable/message_receive"
+                android:paddingLeft="20dp"
+                android:paddingTop="8dp"
+                android:text="이제 졸업이 얼마 남았지?"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/chat_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="나"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/chat_tv2"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/message_send"
+                android:paddingLeft="20dp"
+                android:paddingTop="8dp"
+                android:text="난 이번이 막학기지"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/chat_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="170dp"
+                android:layout_marginBottom="10dp"
+                android:text="양정훈"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/chat_tv3"
+                android:background="@drawable/message_receive"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:text="그렇구나! 캡디한다고 고생했다 이제 꽃길만 걷자구^^"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/chat_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="270dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="나"
+                android:visibility="invisible"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/chat_tv4_1"
+                android:layout_width="180dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/chat_tv4"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/message_send"
+                android:paddingLeft="20dp"
+                android:paddingTop="8dp"
+                android:visibility="invisible"
+                android:text="그래그래! 너도 고생했다!"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/message_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/group_round_bg"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/feed_message_detail_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:background="#fcfcfc"
+            android:src="@drawable/icons_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feed_message_detail_back_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/feed_message_detail_back_btn"
+            android:text="양정훈"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,51 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/feed_post"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feed_post"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
     android:background="@drawable/shape_feed"
-    android:layout_margin="10dp"
-    tools:context=".FeedPost">
+    android:orientation="vertical"
+    tools:context=".feed.FeedPost">
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/feed_post_profile"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:src="@mipmap/ic_launcher"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_rowSpan="3"/>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/feed_post_name"
-                android:text="Test"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="20dp"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/feed_post_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_rowSpan="3"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/default_img" />
 
-            <TextView
-                android:id="@+id/feed_post_date"
-                android:text="날짜"
-                android:layout_row="1"
-                android:layout_column="1"
-                android:layout_marginLeft="20dp"/>
-        </GridLayout>
+        <TextView
+            android:id="@+id/feed_post_name"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Test"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/feed_post_date"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginLeft="20dp"
+            android:text="날짜" />
+    </GridLayout>
 
     <TextView
         android:id="@+id/feed_post_todo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="test용입니다"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:textColor="#817889"
+        android:text="test용입니다" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -53,32 +58,38 @@
         android:layout_margin="10dp">
 
         <TextView
-            android:id="@+id/feed_post_like"
+            android:id="@+id/feed_post_comment_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1"
-            android:layout_marginLeft="230dp"/>
-        <ImageButton
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/icons_comment_1"
-            android:background="#ffffff"
             android:layout_marginTop="3dp"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/feed_post_like" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_marginLeft="50dp"
-            android:layout_toRightOf="@+id/feed_post_like"/>
+            android:layout_toLeftOf="@+id/feed_post_comment_btn"
+            android:layout_marginRight="3dp"
+            android:text="0" />
 
         <ImageButton
+            android:id="@+id/feed_post_comment_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/feed_post_like"
-            android:layout_marginLeft="75dp"
-            android:background="#ffffff"
-            android:src="@drawable/icons_like" />
+            android:layout_marginTop="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/icons_comment_dark" />
+
+        <TextView
+            android:id="@+id/feed_post_like_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/feed_post_like_btn"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:text="0" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/feed_post_like_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/toggle_btn" />
     </RelativeLayout>
 </LinearLayout>

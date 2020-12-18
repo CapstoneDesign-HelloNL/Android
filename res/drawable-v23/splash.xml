@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:drawable="@drawable/splash_bg"
+        tools:ignore="ResourceCycle" />
+    <item
+        android:width="130dp"
+        android:height="180dp"
+        android:gravity="center"
+        android:bottom="50dp">
+        <bitmap android:src="@drawable/splash_icon" />
+    </item>
+</layer-list>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GroupSchedule_detail"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".group.detail.GroupSchedule_detail">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,49 +17,60 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/return_white_icon"
-            android:background="#D47FA6"
-            android:layout_marginLeft="15dp"/>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/add_white"
-            android:layout_marginLeft="340dp"
-            android:background="#D47FA6"/>
+            <ImageButton
+                android:id="@+id/group_schedule_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="#D47FA6"
+                android:src="@drawable/return_white_icon" />
+
+            <ImageButton
+                android:id="@+id/group_schedule_add_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="325dp"
+                android:background="#D47FA6"
+                android:src="@drawable/add_white" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_parent"
-            android:layout_width="wrap_content"
+            android:id="@+id/group_detail_schedule_en_tv"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="일정"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="SCHEDULE"
+            android:textColor="#7AFFFFFF"
+            android:textSize="11sp"
             android:textStyle="bold"
-            android:textSize="24sp"
-            android:textColor="#ffffff"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="40dp"/>
-    </LinearLayout>
-
-    <CalendarView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp">
+            android:transitionName="sche_en_transition" />
 
         <TextView
+            android:id="@+id/group_detail_schedule_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="일정 목록"
-            android:textColor="#000000"
-            android:textSize="15sp"/>
+            android:layout_marginLeft="50dp"
+            android:text="일정"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:transitionName="sche_transition" />
     </LinearLayout>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        app:mcv_tileSize="match_parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/group_schedule_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
 </LinearLayout>

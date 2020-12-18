@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/alert_new_bg">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/message_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/group_img"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="200dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/message_1"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:text="채종희" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/message_1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="220dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="안녕?" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/message_1"
+            android:layout_marginLeft="250dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="210dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="1시간 전" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/feed_message_go_detail"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@drawable/alert_new_bg">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/message_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/group_img"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="200dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/message_2"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:text="양정훈" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/message_2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="220dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="이제 졸업이 얼마나 남았지?" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/message_2"
+            android:layout_marginLeft="250dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="210dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="1시간 전" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/group_round_bg"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/feed_message_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons_back"
+            android:background="#fcfcfc"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메시지"
+            android:layout_toRightOf="@+id/feed_message_back_btn"
+            android:layout_below="@id/feed_message_back_btn"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feed_message_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>

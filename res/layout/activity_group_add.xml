@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GroupAddActivity"
+    tools:context=".group.GroupAddActivity"
     android:orientation="vertical"
     android:background="#ffffff">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,42 +39,62 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="학교명"
+            android:text="그룹명"
             android:textSize="18sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="70dp"/>
-        <EditText
-            android:id="@+id/group_add_school"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textSize="14sp"
-            android:backgroundTint="#00D9C5"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="풀 네임을 입력해주세요."
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:text="그룹명" />
-
         <EditText
             android:id="@+id/group_add_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="250dp"
             android:textSize="14sp"
+            android:maxLines="1"
+            android:inputType="text"
             android:backgroundTint="#00D9C5"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="학교명" />
+
+        <EditText
+            android:id="@+id/group_add_univ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:backgroundTint="#00D9C5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:text="가입 코드 설정" />
+
+        <EditText
+            android:id="@+id/group_add_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="100dp"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:hint="e.g. 동아리앱은 AREACT"
+            android:maxLength="20"
+            android:backgroundTint="#00D9C5" />
 
         <Button
             android:id="@+id/group_add_complete_btn"

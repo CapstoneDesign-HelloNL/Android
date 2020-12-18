@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".group.detail.GroupNoticePostsActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/blue_round_bk"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/group_notice_posts_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="#4B9AC8"
+                android:src="@drawable/return_white_icon" />
+
+            <ImageButton
+                android:id="@+id/group_notice_posts_delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="320dp"
+                android:background="#4B9AC8"
+                android:src="@drawable/ic_delete_pink_24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="["
+                android:textColor="#ffffff"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/group_notice_posts_keyword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회의"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="]"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/group_notice_posts_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이것은 제목입니다"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/group_notice_posts_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12/11 11:00"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#8EE6E6E6" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/group_notice_posts_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="안녕하세요"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp" />
+</LinearLayout>

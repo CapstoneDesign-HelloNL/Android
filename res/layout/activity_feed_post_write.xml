@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feed_post_write_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/feed_post_write_layout"
-    tools:context=".FeedPostWrite">
+    android:background="#ffffff"
+    tools:context=".feed.FeedPostWrite">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ffffff">
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginTop="220dp"
-                android:layout_marginLeft="50dp"
-                android:hint="무슨 생각을 하고 계신가요?"
-                android:background="@android:color/transparent"/>
-        </LinearLayout>
+                android:background="#ffffff">
+
+                <EditText
+                    android:id="@+id/feed_post_write_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:hint="무슨 생각을 하고 계신가요?"
+                    android:paddingBottom="400dp" />
+            </LinearLayout>
+        </ScrollView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="180dp"
@@ -40,44 +50,36 @@
                     android:layout_marginTop="20dp"
                     android:background="#4B9AC8"
                     android:src="@drawable/return_white_icon" />
+
                 <Button
                     android:id="@+id/feed_write_complete"
                     android:layout_width="60dp"
                     android:layout_height="45dp"
                     android:layout_marginLeft="300dp"
                     android:layout_marginTop="5dp"
+                    android:background="#4B9AC8"
                     android:text="작성완료"
-                    android:textStyle="bold"
                     android:textColor="#ffffff"
-                    android:background="#4B9AC8"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
-            <GridLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp">
-                <ImageView
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="30dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_rowSpan="3"/>
+                android:orientation="vertical">
 
-                <TextView android:text="Test"
-                    android:layout_row="0"
-                    android:layout_column="1"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
                     android:layout_marginTop="25dp"
-                    android:layout_marginLeft="20dp"
+                    android:text="피드 작성"
                     android:textColor="#ffffff"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:transitionName="gallery_transition" />
 
-                <TextView android:text="날짜"
-                    android:layout_row="1"
-                    android:layout_column="1"
-                    android:layout_marginLeft="20dp"/>
-            </GridLayout>
+            </LinearLayout>
         </LinearLayout>
     </FrameLayout>
 

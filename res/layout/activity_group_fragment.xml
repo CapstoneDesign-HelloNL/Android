@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/group_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:orientation="vertical"
-    tools:context=".GroupFragment"
-    android:background="#ffffff">
+    tools:context=".group.GroupFragment">
 
     <!--레이아웃 겹치기로 인해 역순으로 지정-->
     <!--추천 그룹-->
@@ -24,101 +23,139 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="490dp"
                 android:text="추천 그룹"
-                android:textSize="18sp"
-                android:textStyle="bold"
                 android:textColor="#ffffff"
-                android:layout_marginTop="500dp"
-                android:layout_marginLeft="30dp"/>
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="30dp">
-
-            <LinearLayout
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="30dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"/>
-            </LinearLayout>
-        </HorizontalScrollView>
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_recommend"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/group_img" />
+
+                    <TextView
+                        android:id="@+id/group_recommend_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_recommend"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:textColor="#fcfcfc"
+                        android:text="AlgorithmAll" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_recommend2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="98dp"
+                        android:layout_below="@+id/group_recommend2"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:textColor="#fcfcfc"
+                        android:text="AndroidStudy" />
+                </RelativeLayout>
+            </HorizontalScrollView>
         </LinearLayout>
 
         <!--현재 가입 그룹-->
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="480dp"
-            android:orientation="vertical"
-            android:background="@drawable/group_round_bg2">
+            android:background="@drawable/group_round_bg2"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="170dp"
+                android:layout_marginBottom="20dp"
                 android:text="현재 가입 그룹"
+                android:textColor="#ffffff"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="#ffffff"
-                android:layout_marginTop="170dp"
+                android:id="@+id/group_present_join_tv" />
+
+            <TextView
+                android:id="@+id/group_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginBottom="20dp"/>
+                android:text="가입하신 그룹이 없습니다."
+                android:textColor="#ffffff"
+                android:layout_below="@id/group_present_join_tv"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/group_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/group_present_join_tv"
+                android:layout_height="260dp" />
+        </RelativeLayout>
+
+        <!--메인 그룹-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/group_round_bg3"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:text="가입하신 그룹이 없습니다."/>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/group_"
-                android:layout_width="match_parent"
-                android:layout_height="260dp">
-            </androidx.recyclerview.widget.RecyclerView>
+                android:layout_margin="50dp"
+                android:text="그룹"
+                android:textColor="#000000"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/group_add_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="20dp"
+                android:background="#FCFCFC"
+                android:src="@drawable/plus_icon" />
+
+            <ImageButton
+                android:id="@+id/group_searh_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:background="#FCFCFC"
+                android:src="@drawable/search_icon2" />
         </LinearLayout>
-
-        <!--메인 그룹-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:animateLayoutChanges="true"
-        android:background="@drawable/group_round_bg"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="50dp"
-            android:text="그룹"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:textSize="30dp" />
-
-        <ImageButton
-            android:id="@+id/group_add_btn"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="#FCFCFC"
-            android:src="@drawable/plus_icon"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="20dp"/>
-
-        <ImageButton
-            android:id="@+id/group_searh_btn"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:background="#FCFCFC"
-            android:src="@drawable/search_icon2"/>
-    </LinearLayout>
-
     </FrameLayout>
 </LinearLayout>

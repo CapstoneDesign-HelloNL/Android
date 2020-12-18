@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:elevation="10dp"
+    android:background="@drawable/alert_new_bg">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/alert_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/group_img" />
+
+    <TextView
+        android:id="@+id/feed_message_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="208dp"
+        android:layout_toRightOf="@+id/alert_img"
+        android:text="test"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/feed_message_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/alert_img"
+        android:text="TEST입니다."
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</RelativeLayout>
+

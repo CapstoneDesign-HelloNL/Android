@@ -1,4 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/sign_in_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -6,7 +8,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <EditText
             android:id="@+id/sign_in_id"
@@ -15,7 +18,8 @@
             android:hint="example@areact.com"
             android:layout_margin="20dp"
             android:maxLines="1"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/sign_in_pw"
@@ -24,10 +28,10 @@
             android:hint="비밀번호"
             android:layout_margin="20dp"
             android:maxLines="1"
-            android:inputType="text"/>
+            android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/continue_btn"
+            android:id="@+id/sign_in_continue_btn"
             android:text="계속"
             android:textColor="#FFFFFF"
             android:textSize="16sp"

@@ -3,21 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GroupAddActivity"
+    tools:context=".group.GroupAddActivity"
     android:orientation="vertical"
     android:background="#ffffff">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffff">
+        android:background="#ffffff"
+        android:paddingTop="20dp">
 
         <ImageButton
             android:id="@+id/group_request_join_back_btn"
             android:background="#ffffff"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
             android:src="@drawable/return_icon"/>
 
@@ -27,7 +28,7 @@
             android:text="가입 요청"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginLeft="125dp"
+            android:layout_marginLeft="115dp"
             android:textColor="#000000"/>
     </LinearLayout>
 
@@ -43,7 +44,7 @@
             android:textSize="18sp"
             android:textColor="#000000"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="70dp"/>
+            android:layout_marginTop="120dp" />
         <EditText
             android:id="@+id/group_request_interest_et"
             android:layout_width="match_parent"
@@ -53,12 +54,7 @@
             android:textSize="14sp"
             android:backgroundTint="#00D9C5"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:visibility="invisible"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,10 +62,29 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
             android:text="지원 동기"
-            android:textColor="#000000"/>
+            android:textColor="#000000" />
 
         <EditText
             android:id="@+id/group_request_reason_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="14sp"
+            android:backgroundTint="#00D9C5" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:text="그룹 코드"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/group_request_code_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -94,7 +109,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="당신은 관리자의 승인 후에 가입이 될 것입니다."
+            android:text="무분별한 가입을 방지하기 위해서 그룹 코드를 입력합니다."
             android:layout_gravity="center"
             android:textColor="#000000"
             android:textStyle="bold"
